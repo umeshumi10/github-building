@@ -1,6 +1,9 @@
 name: 02-WorkFlow Events
 on: 
   push:
+  workflow_dispatch:
+  schedule:
+  pull_request:
 jobs:
   echo:
     runs-on: ubuntu-latest
