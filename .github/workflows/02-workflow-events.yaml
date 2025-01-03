@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Show the trigger
         run: |
-           echo" Event Trigger: ${{github.event}}
-           echo" Event Trigger: ${{github.event_name}}
+           echo "  Event Trigger: ${{github.event}}  "
+           echo " Event Trigger: ${{github.event_name}} "
