@@ -14,5 +14,5 @@ jobs:
         working-directory: 04-using-actions/react-app
         run: |
           pwd
-          npm ci
+          npm install
 
