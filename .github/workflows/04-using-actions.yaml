@@ -9,4 +9,4 @@ jobs:
         with:
           node-version:20.0
       - name: Printing Folders
-        runs: ls -al
+        run: ls -al
