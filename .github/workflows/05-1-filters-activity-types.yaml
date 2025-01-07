@@ -8,6 +8,6 @@ on:
       - main
 jobs:
   echo:
-     runs-on: ubuntu-latest
-     steps:
-        - run: echo " PR open or syncronize will make it run"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo " PR open or syncronize will make it run"
