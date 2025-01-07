@@ -8,4 +8,6 @@ on:
       - main
 jobs:
   echo:
-    run: echo " PR open or syncronize will make it run"
+    steps:
+       - name: 
+         run: echo " PR open or syncronize will make it run"
