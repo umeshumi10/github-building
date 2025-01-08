@@ -4,9 +4,9 @@ on:
   push:
   workflow_dispatch:
     inputs:
-        description: debug
+        description: 'debug'
         type: boolean
-        default: "false"
+        default: false
 jobs:
   echo-data:
     runs-on: ubuntu-latest
