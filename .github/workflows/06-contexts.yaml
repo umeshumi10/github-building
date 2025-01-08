@@ -1,6 +1,12 @@
 name: 06-Contexts
-run-name: My custome workflow run name - ${{ runner.os }}
-on: push
+run-name: 06-Contexts | Debug -${{ inputs.debug}}
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+        name: debug
+        type: boolean
+        default: false
 jobs:
   echo-data:
     runs-on: ubuntu-latest
