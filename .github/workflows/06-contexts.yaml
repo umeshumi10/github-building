@@ -32,5 +32,5 @@ jobs:
         env:
           MY_OVERWRITTEN_VAR: step
         run: |
-          echo " workflow_ENV: $ MY_WORKFLOW_VAR "
-          echo " Overwritten_ENV: $  MY_OVERWRITTEN_VAR "
+          echo " workflow_ENV: $MY_WORKFLOW_VAR "
+          echo " Overwritten_ENV: $MY_OVERWRITTEN_VAR "
