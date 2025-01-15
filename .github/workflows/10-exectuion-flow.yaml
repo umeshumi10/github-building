@@ -19,7 +19,7 @@ jobs:
         run: | 
            echo "Running Tests....."   
       - name: Failing tests
-        if: ${{!inputs.pass-unit-tests}}
+        if: ${{inputs.pass-unit-tests == true}}
         run: |
           exit 1
   deploy-nonprod:
