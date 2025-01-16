@@ -14,7 +14,7 @@ jobs:
                echo "${{github.event.pull_requests.labels}}"
                EOF
           - name: Bug fix Step
-            if: ${{!cancelled && contain(github.event.pull_requests.title, 'fix')}}
+            if: ${{!cancelled() && contain(github.event.pull_requests.title, 'fix')}}
             run: echo " I am bug fix Step"
           - name: Sleep for 20 Sec
             run: sleep 20
