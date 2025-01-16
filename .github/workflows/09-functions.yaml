@@ -7,13 +7,15 @@ jobs:
       runs-on: ubuntu-latest
       steps:
           - name: Print PR Title
-            run: echo "${{gihub.event.pull_requests.title}}"
+            run: echo "${{github.event.pull_requests.title}}"
           - name: Print PR Labels
             run: | 
                cat << EOF  
-               echo "${{gihub.event.pull_requests.title}}"
+               echo "${{github.event.pull_requests.labels}}"
                EOF
-            run: sleep 20
+          - name: Bug fix Step
+            if: ${{!cancelled && contain(github.event.pull_requests.title, 'fix')}}
+            run: echo " I am bug fix Step"
           - name: Sleep for 20 Sec
             run: sleep 20
           - name: Failing Step
