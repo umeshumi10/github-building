@@ -19,6 +19,7 @@ jobs:
         run: | 
            echo "Running Tests....."   
       - name: Failing tests
+        continue-on-error: true
         if: ${{inputs.pass-unit-tests == false}}
         run: |
           exit 1
