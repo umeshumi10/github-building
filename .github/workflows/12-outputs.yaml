@@ -10,7 +10,7 @@ on:
             default: success
 jobs:
     build:
-      output:
+      outputs:
         build-status: ${{ step.build.output.status }}
       runs-on: ubuntu-latest
       steps:
