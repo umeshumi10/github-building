@@ -8,7 +8,7 @@ jobs:
         matrix:
           node: [18,20,21]
           os: [ubuntu-latest,windows-latest]
-        include:
+          include:
             - node: 16.x
               os: ubuntu-latest
             - node: 21.x
@@ -22,7 +22,7 @@ jobs:
           with:
             node-version: ${{matrix.node}}
         - name: Fail if experimental
-          if: ${{include.tag == 'experimental'}}
+          if: ${{matrix.include.tag == 'experimental'}}
           run: exit 1
 
         - name: Perform some tests
