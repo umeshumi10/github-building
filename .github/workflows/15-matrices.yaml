@@ -8,10 +8,24 @@ jobs:
         matrix:
           node: [18,20,21]
           os: [ubuntu-latest,windows-latest]
+        include:
+            - node: 16.x
+              os: ubuntu-latest
+            - node: 21.x
+              os: ubuntu-latest
+              tag: experimental
+        fail-fast: false
+
       steps:
         - name: Setup-node
           uses: actions/setup-node@v3
           with:
             node-version: ${{matrix.node}}
+        - name: Fail if experimental
+          if: ${{include.tag == 'experimental'}}
+          run: exit 1
+
         - name: Perform some tests
           run: echo "Running tests on OS ${{matrix.os}} and Node JS ${{matrix.node}}"
+        - name: Upload test results
+          run: echo " uploading test results"
