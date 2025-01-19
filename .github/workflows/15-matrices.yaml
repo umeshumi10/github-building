@@ -1,5 +1,5 @@
 name: 15-Working with Matrices
-on: workfloe_dispatch
+on: workflow_dispatch
 jobs:
   backwards-compatibility:
       name: ${{matrix.os}}-${{matrix.node}}
