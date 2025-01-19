@@ -1,6 +1,6 @@
 name: 16-Working with Environments
 on:
-  working_dispatch:
+  workflow_dispatch:
     inputs:
       target-env:
           type: environment
