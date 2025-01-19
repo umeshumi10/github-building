@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
   backwards-compatibility:
       name: ${{matrix.os}}-${{matrix.node}}
-      runs-on: ${{matix.os}}
+      runs-on: ${{matrix.os}}
       strategy:
         matrix:
           node: [18,20,21]
